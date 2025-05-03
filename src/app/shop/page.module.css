@@ -191,6 +191,17 @@
     .secondsection {
         grid-template-columns: repeat(1, 1fr);
     }
+    .subscriptionContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #000;
+    gap: 5px;
+    }
+    .subscribeButton{
+        margin-left: 0px;
+    }
+
 }
 
 .whitelineMob {
