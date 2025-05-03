@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './FilterSection.module.css';
+import styles from './filtersection.module.css';
 
 type FilterSectionProps = {
   label: string;

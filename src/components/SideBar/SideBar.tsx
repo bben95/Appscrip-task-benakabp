@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import styles from './sideBar.module.css';
+import styles from './sidebar.module.css';
 type SideBarProps = {
   menuItems: string[];
 }
