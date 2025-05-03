@@ -33,7 +33,7 @@ const Navbar = () => {
                <Image className={styles.icon} src={ShoppingBagIcon} alt='shoppingbag-icon' />
                <Image className={`${styles.icon} ${styles.user}`} src={ProfileIcon} alt='profile-icon' />
                <div className={styles.dropdown}>
-                  <Dropdown name='Eng' items={['Hindi', 'English', 'Kan']} onSelect={onselect} />
+                  <Dropdown name={item} items={['Hindi', 'English', 'Kan']} onSelect={onselect} />
                </div>
             </div>
          </div>

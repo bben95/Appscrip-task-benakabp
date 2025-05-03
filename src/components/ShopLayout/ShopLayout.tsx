@@ -49,10 +49,10 @@ const ShopLayout = ({ products }: { products: ProductProps[] }) => {
     brand: [],
     category: [],
     tags: [],
-  } as Record<string, string[]>);
+  } );
   const [sortOption, setSortOption] = useState('RECOMMENDED');
   const [isSidebarOpen, setSidebarOpen] = useState(false);
-  const [liked, setLiked] = useState<any>([]);
+  const [liked, setLiked] = useState<number[]>([]);
   const updateFilter = (key: keyof typeof selectedFilters, value: string, checked: boolean) => {
     setSelectedFilters(prev => {
       const updated = checked
@@ -68,9 +68,9 @@ const ShopLayout = ({ products }: { products: ProductProps[] }) => {
   }), [products]);
   const filteredProducts = useMemo(() => {
     const filtered = products.filter(product => {
-      const matchBrand = selectedFilters.brand.length === 0 || selectedFilters.brand.includes(product.brand);
-      const matchCategory = selectedFilters.category.length === 0 || selectedFilters.category.includes(product.category);
-      const matchTags = selectedFilters.tags.length === 0 || product.tags.some(tag => selectedFilters.tags.includes(tag));
+      const matchBrand = selectedFilters.brand.length === 0 || selectedFilters.brand.includes(product.brand as never);
+      const matchCategory = selectedFilters.category.length === 0 || selectedFilters.category.includes(product.category as never);
+      const matchTags = selectedFilters.tags.length === 0 || product.tags.some(tag => selectedFilters.tags.includes(tag as never));
       return matchBrand && matchCategory && matchTags;
     });
     switch (sortOption) {

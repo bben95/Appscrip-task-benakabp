@@ -9,7 +9,7 @@ import heartRed from '../../../public/images/heart-red.svg'
 type ProductListProps = {
   filteredProducts: ProductProps[], 
   isSidebarOpen: boolean, 
-  onclick: (e: any) => void,
+  onclick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void,
   liked: number[]
 }
 

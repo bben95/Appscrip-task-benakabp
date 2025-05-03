@@ -4,9 +4,9 @@ import FilterSection from '../FilterSection/FilterSection';
 
 type FilterSidebarProps = {
   isSidebarOpen: boolean;
-  filterOptions: any;
-  selectedFilters: any;
-  updateFilter: (type: string, val: string, checked: boolean) => void;
+  filterOptions: {brand:string[],category:string[],tags:string[]};
+  selectedFilters:  {brand:string[],category:string[],tags:string[]};
+  updateFilter: (key: any, value: string, checked: boolean) => void;
 }
 
 const FilterSidebar = ({ isSidebarOpen, filterOptions, selectedFilters, updateFilter }: FilterSidebarProps) => {
