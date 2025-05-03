@@ -11,7 +11,7 @@ import ProfileIcon from '../../../public/images/profile.png'
 import SideBar from '../SideBar/SideBar'
 const menuItems = ['SHOP', 'SKILLS', 'STORIES', 'ABOUT', 'CONTACT US'];
 const Navbar = () => {
-   const [item, setItem] = useState('')
+   const [item, setItem] = useState("ENG")
    const onselect = (newItem: string) => {
       setItem(newItem)
    }
@@ -33,7 +33,7 @@ const Navbar = () => {
                <Image className={styles.icon} src={ShoppingBagIcon} alt='shoppingbag-icon' />
                <Image className={`${styles.icon} ${styles.user}`} src={ProfileIcon} alt='profile-icon' />
                <div className={styles.dropdown}>
-                  <Dropdown name={item} items={['Hindi', 'English', 'Kan']} onSelect={onselect} />
+                  <Dropdown name={item} items={['HIN', 'ENG', 'KAN']} onSelect={onselect} />
                </div>
             </div>
          </div>
