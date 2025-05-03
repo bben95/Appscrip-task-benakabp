@@ -1,0 +1,60 @@
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+    width: 16px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+}
+.hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #000;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(3px, 3px);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(3px, -3px);
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    padding: 2rem 1rem;
+}
+.sidebar.show {
+    right: 0;
+}
+.menuItems h5 {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
