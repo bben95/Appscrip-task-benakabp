@@ -6,7 +6,7 @@ type FilterSidebarProps = {
   isSidebarOpen: boolean;
   filterOptions: {brand:string[],category:string[],tags:string[]};
   selectedFilters:  {brand:string[],category:string[],tags:string[]};
-  updateFilter: (key: any, value: string, checked: boolean) => void;
+  updateFilter: (key: "brand" | "category" | "tags", value: string, checked: boolean) => void;
 }
 
 const FilterSidebar = ({ isSidebarOpen, filterOptions, selectedFilters, updateFilter }: FilterSidebarProps) => {

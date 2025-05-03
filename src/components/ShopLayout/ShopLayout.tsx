@@ -89,13 +89,14 @@ const ShopLayout = ({ products }: { products: ProductProps[] }) => {
   const handleSelect = (item: string) => {
     setSortOption(item)
   }
-  const handleContainerClick = (e: any) => {
-    const heartIcon = e.target.closest('[data-heart-icon]');
+  const handleContainerClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const target =e.target as Element
+    const heartIcon = target.closest('[data-heart-icon]');
     if (heartIcon) {
       e.preventDefault();
       const id = heartIcon.getAttribute('data-product-id');
-      const productId = parseInt(id)
-      setLiked((prev: any) => [...prev].includes(productId) ? [...prev].filter((item) => item !== productId) : [...prev, productId])
+      const productId = parseInt(id as string)
+      setLiked((prev: number[]) => [...prev].includes(productId) ? [...prev].filter((item) => item !== productId) : [...prev, productId])
     }
   }
   return (
